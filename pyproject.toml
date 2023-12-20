@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "template-qt"
+version = "0.1.0"
+description = ""
+authors = ["Nicolas M. <mine.nicolas@gmail.com>"]
+readme = "README.md"
+packages = [{include = "template_qt"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyside6 = "6.6.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

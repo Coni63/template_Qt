@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'main_window.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.4.3
+## Created by: Qt User Interface Compiler version 6.6.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -16,14 +16,16 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QMainWindow, QMenu, QMenuBar,
-    QSizePolicy, QStackedWidget, QStatusBar, QWidget)
+from PySide6.QtWidgets import (QApplication, QHBoxLayout, QMainWindow, QMenu,
+    QMenuBar, QPushButton, QSizePolicy, QStackedWidget,
+    QStatusBar, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(800, 600)
+        MainWindow.setMaximumSize(QSize(800, 600))
         self.actionOpen = QAction(MainWindow)
         self.actionOpen.setObjectName(u"actionOpen")
         self.actionSave = QAction(MainWindow)
@@ -34,15 +36,48 @@ class Ui_MainWindow(object):
         self.actionQuit.setObjectName(u"actionQuit")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.stackedWidget = QStackedWidget(self.centralwidget)
+        self.verticalLayoutWidget = QWidget(self.centralwidget)
+        self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
+        self.verticalLayoutWidget.setGeometry(QRect(10, 10, 781, 541))
+        self.verticalLayout = QVBoxLayout(self.verticalLayoutWidget)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.pb_menu1 = QPushButton(self.verticalLayoutWidget)
+        self.pb_menu1.setObjectName(u"pb_menu1")
+
+        self.horizontalLayout.addWidget(self.pb_menu1)
+
+        self.pb_menu2 = QPushButton(self.verticalLayoutWidget)
+        self.pb_menu2.setObjectName(u"pb_menu2")
+
+        self.horizontalLayout.addWidget(self.pb_menu2)
+
+        self.pb_menu3 = QPushButton(self.verticalLayoutWidget)
+        self.pb_menu3.setObjectName(u"pb_menu3")
+
+        self.horizontalLayout.addWidget(self.pb_menu3)
+
+        self.pb_menu4 = QPushButton(self.verticalLayoutWidget)
+        self.pb_menu4.setObjectName(u"pb_menu4")
+
+        self.horizontalLayout.addWidget(self.pb_menu4)
+
+
+        self.verticalLayout.addLayout(self.horizontalLayout)
+
+        self.stackedWidget = QStackedWidget(self.verticalLayoutWidget)
         self.stackedWidget.setObjectName(u"stackedWidget")
-        self.stackedWidget.setGeometry(QRect(30, 30, 511, 311))
         self.page = QWidget()
         self.page.setObjectName(u"page")
         self.stackedWidget.addWidget(self.page)
         self.page_2 = QWidget()
         self.page_2.setObjectName(u"page_2")
         self.stackedWidget.addWidget(self.page_2)
+
+        self.verticalLayout.addWidget(self.stackedWidget)
+
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
@@ -62,9 +97,6 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(0)
-
-
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
 
@@ -74,6 +106,10 @@ class Ui_MainWindow(object):
         self.actionSave.setText(QCoreApplication.translate("MainWindow", u"Save", None))
         self.actionSave_As.setText(QCoreApplication.translate("MainWindow", u"Save As", None))
         self.actionQuit.setText(QCoreApplication.translate("MainWindow", u"Quit", None))
+        self.pb_menu1.setText(QCoreApplication.translate("MainWindow", u"Menu 1", None))
+        self.pb_menu2.setText(QCoreApplication.translate("MainWindow", u"Menu 2", None))
+        self.pb_menu3.setText(QCoreApplication.translate("MainWindow", u"Menu 3", None))
+        self.pb_menu4.setText(QCoreApplication.translate("MainWindow", u"Menu 4", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
     # retranslateUi
 
